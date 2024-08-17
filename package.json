@@ -1,0 +1,30 @@
+{
+    "name": "platzi-framework-bdd",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx codeceptjs run --features --plugins allure",
+        "test-dev": "npx codeceptjs run --grep '@probando' --verbose --plugins allure",
+        "show-report": "allure serve output",
+        "codeceptjs": "codeceptjs run --steps",
+        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+        "codeceptjs:ui": "codecept-ui --app",
+        "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples",
+        "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@codeceptjs/configure": "^1.0.1",
+        "@codeceptjs/examples": "^1.2.4",
+        "@codeceptjs/ui": "^1.1.1",
+        "codeceptjs": "^3.6.2",
+        "playwright": "^1.44.0"
+    },
+    "dependencies": {
+        "puppeteer": "^22.8.0"
+    }
+}
